@@ -1,8 +1,8 @@
 With Ada.Text_IO; Use Ada.Text_IO;
 
-Procedure Fatorial is
+Procedure Fibonacci is
 	numero: Integer;
-	fatorial: Integer := 1;
+	resultado: Integer;
 
 	-- Leitura String
 	function Get_String return String is
@@ -20,10 +20,21 @@ Procedure Fatorial is
 		return Integer'Value (S);
 	end Get_Integer;
 
+	--Fibonacci!
+	function Fib(num: in Integer) return Integer is
+	begin
+		if num = 2 then
+			return 1;
+		end if;
+		if num = 1 then
+			return 1;
+		end if;
+		return Fib(num - 1) + Fib(num - 2);
+	end Fib;
+
 begin
 	numero := Get_Integer;
-	for I in Integer range 1 .. numero loop
-		fatorial := fatorial * I;
-	end loop;
-	Put_Line(Integer'Image(fatorial));
-end Fatorial;
+	resultado := Fib(numero);
+	Put_Line(Integer'Image(resultado));
+
+end Fibonacci;
