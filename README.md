@@ -24,3 +24,15 @@ $ HelloWorld
 ```
 
 #### Pronto, o último comando acima executa o código. Lembre-se sempre de remover os acentos.
+
+### Nos exercícios de exemplo, foi criado um esquema com arquivos de entrada e saída. Para rodar, basta fazer:
+
+```
+$ gcc -c NomeDoArquivo.adb && gnatbind NomeDoArquivo && gnatlink NomeDoArquivo && NomeDoArquivo < entrada.txt > saida.txt
+```
+
+#### por exemplo:
+
+```
+$ gcc -c BuscaBinaria.adb && gnatbind BuscaBinaria && gnatlink BuscaBinaria && BuscaBinaria < entrada.txt > saida.txt
+```
